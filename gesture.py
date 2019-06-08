@@ -32,7 +32,7 @@ while(cap.isOpened()):
     if version == '3':
         image, contours, hierarchy = cv2.findContours(thresh1.copy(), \
                cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
-    elif version == '2':
+    else :
         contours, hierarchy = cv2.findContours(thresh1.copy(),cv2.RETR_TREE, \
                cv2.CHAIN_APPROX_NONE)
 
@@ -118,10 +118,10 @@ while(cap.isOpened()):
                     cv2.putText(img,'0',(50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
                 elif arearatio<17.5:
                     cv2.putText(img,'Best of luck',(50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
-                   
+
                 else:
                     cv2.putText(img,'1',(50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
-    
+
     # show appropriate images in windows
     cv2.imshow('Gesture', img)
     all_img = np.hstack((drawing, crop_img))

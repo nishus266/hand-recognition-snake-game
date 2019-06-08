@@ -46,7 +46,7 @@ def gesture():
         if version == '3':
             image, contours, hierarchy = cv2.findContours(thresh1.copy(), \
                    cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
-        elif version == '2':
+        else:
             contours, hierarchy = cv2.findContours(thresh1.copy(),cv2.RETR_TREE, \
                    cv2.CHAIN_APPROX_NONE)
 
